@@ -1,0 +1,10 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #222;
+}
+.titulo {
+    color: #333;
+    font-size: 2em;
+    text-align: center;
+}
