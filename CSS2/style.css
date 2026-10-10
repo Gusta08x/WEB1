@@ -1,10 +1,120 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #222;
+    background-color: #111111;
+    color: white;
+    margin: 20px;
 }
-.titulo {
-    color: #333;
-    font-size: 2em;
+/* Aqui é para o Cabeçalho */
+header {
+    background-color: #1a1a1a;
+    color: white;
     text-align: center;
+    padding: 20px;
+    border-bottom: 4px solid #FFB900;
+}
+/* Título principal */
+h1 {
+    color: #FFB900;
+    text-shadow: 2px 2px 3px black;
+}
+/* Subtítulo escrito em itálico */
+header h2 {
+    font-style: italic;
+}
+/* Menu */
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+nav a:hover {
+    color: #FFB900;
+}
+/* Seções */
+section {
+    background-color: #1c1c1c;
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #333333;
+    border-radius: 8px;
+}
+/* Títulos das seções */
+section h2 {
+    color: #FFB900;
+}
+/* Filme em destaque */
+.destaque {
+    border: 2px solid #FFB900;
+    padding: 10px;
+    border-radius: 8px;
+}
+.destaque img {
+    width: 150px;
+    margin-right: 15px;
+}
+/* Cards dos filmes no catálogo */
+.filme {
+    display: inline-block;
+    vertical-align: top;
+    width: 180px;
+    height: 370px;
+    background-color: #262626;
+    border: 1px solid #444444;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px;
+}
+/* Capas dos filmes */
+.filme img {
+    width: 150px;
+    height: 220px;
+}
+/* Títulos dos cards */
+.filme h3 {
+    color: white;
+    font-size: 17px;
+}
+/* Informações sobre os filmes */
+.filme p {
+    font-size: 14px;
+}
+/* Tabela sobre os filmes */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+    background-color: #FFB900;
+    color: white;
+}
+th, td {
+    border: 1px solid #444444;
+    padding: 10px;
+    text-align: left;
+}
+tr:nth-child(even) {
+    background-color: #292929;
+}
+/* Lista de gêneros dos filmes */
+.generos {
+    list-style-type: square;
+}
+.generos li {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+}
+/* Imagem à direita do texto */
+.logo {
+    float: right;
+    width: 80px;
+    margin: 5px;
+}
+/* Rodapé da página*/
+footer {
+    background-color: #1a1a1a;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid #FFB900;
 }

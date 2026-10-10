@@ -1,15 +1,224 @@
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinema Alagoinhas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1 class="titulo">CATÁLOGO DE FILMES</h1>
-        <h2>Seus filmes favoritos estão aqui!</h2>
+    <!-- Cabeçalho do catálogo -->
+    <header id="inicio">
+        <h1>CineAlagoinhas</h1>
+        <h2>Os principais filmes do cinema estão aqui!!</h2>
+        <!-- Menu da página -->
+        <nav>
+            <a href="#destaque">Destaque</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#avaliacoes">Avaliações</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
     </header>
+    <!-- Filme em destaque -->
+    <section id="destaque">
+        <h2>Destaque da Semana</h2>
+        <div class="destaque">
+            <img src="assets/filme4.png" alt="Pôster de Interestelar">
+            <div>
+                <h3>Interestelar</h3>
+                <p>As reservas naturais da Terra estão chegando ao fim e um grupo de astronautas 
+                    recebe a missão de verificar possíveis planetas para receberem a população mundial, 
+                    possibilitando a continuação da espécie. Cooper é chamado para liderar o grupo 
+                    e aceita a missão sabendo que pode nunca mais ver os filhos. 
+                    Ao lado de Brand, Jenkins e Doyle, ele seguirá em busca de um novo lar.</p>
+                <p>Gêneros:</p>
+                <ul>
+                    <li>Ficção científica</li>
+                    <li>Drama</li>
+                    <li>Aventura</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Catálogo de filmes -->
+    <section id="catalogo">
+        <h2>Catálogo de Filmes</h2>
+        <div class="filme">
+            <img src="assets/filme1.jpg" alt="Pôster de Velozes e Furiosos 5">
+            <h3>Velozes e Furiosos 5</h3>
+            <p>Ano: 2011</p>
+            <p>Gênero: Ação</p>
+        </div>
+        <div class="filme">
+            <img src="assets/filme2.jpg" alt="Pôster de Vingadores: Guerra Infinita">
+            <h3>Vingadores: Guerra Infinita</h3>
+            <p>Ano: 2018</p>
+            <p>Gênero: Ação</p>
+        </div>
+        <div class="filme">
+            <img src="assets/filme3.jpg" alt="Pôster de Anjos da Lei">
+            <h3>Anjos da Lei</h3>
+            <p>Ano: 2012</p>
+            <p>Gênero: Comédia</p>
+        </div>
+        <div class="filme">
+            <img src="assets/filme4.png" alt="Pôster de Interestelar">
+            <h3>Interestelar</h3>
+            <p>Ano: 2014</p>
+            <p>Gênero: Ficção científica</p>
+        </div>
+        <div class="filme">
+            <img src="assets/filme5.jpg" alt="Pôster de Um Filme Minecraft">
+            <h3>Um Filme Minecraft</h3>
+            <p>Ano: 2025</p>
+            <p>Gênero: Aventura</p>
+        </div>
+        <div class="filme">
+            <img src="assets/filme6.jpg" alt="Pôster de Coringa">
+            <h3>Coringa</h3>
+            <p>Ano: 2019</p>
+            <p>Gênero: Drama</p>
+        </div>
+        <div class="filme">
+            <img src="assets/filme7.jpg" alt="Pôster de Ford vs Ferrari">
+            <h3>Ford vs Ferrari</h3>
+            <p>Ano: 2019</p>
+            <p>Gênero: Drama</p>
+        </div>
+        <div class="filme">
+            <img src="assets/filme8.jpg" alt="Pôster de Até o Último Homem">
+            <h3>Até o Último Homem</h3>
+            <p>Ano: 2016</p>
+            <p>Gênero: Guerra</p>
+        </div>
+        <div class="filme">
+            <img src="assets/filme9.jpg" alt="Pôster de Corações de Ferro">
+            <h3>Corações de Ferro</h3>
+            <p>Ano: 2014</p>
+            <p>Gênero: Guerra</p>
+        </div>
+    </section>
+    <!-- Tabela de filmes -->
+    <section id="avaliacoes">
+        <h2>Filmes e Avaliações</h2>
+        <table>
+            <tr>
+                <th>Filme</th>
+                <th>Ano</th>
+                <th>Gênero</th>
+                <th>Duração</th>
+                <th>Classificação</th>
+                <th>Nota</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>Velozes e Furiosos 5: Operação Rio</td>
+                <td>2011</td>
+                <td>Ação</td>
+                <td>130 min</td>
+                <td>14 Anos</td>
+                <td>7,3</td>
+                <td>Disponível</td>
+            </tr>
+            <tr>
+                <td>Vingadores: Guerra Infinita</td>
+                <td>2018</td>
+                <td>Ação</td>
+                <td>149 min</td>
+                <td>12 Anos</td>
+                <td>8,4</td>
+                <td>Disponível</td>
+            </tr>
+            <tr>
+                <td>Anjos da Lei</td>
+                <td>2012</td>
+                <td>Comédia</td>
+                <td>109 min</td>
+                <td>14 Anos</td>
+                <td>7,2</td>
+                <td>Disponível</td>
+            </tr>
+            <tr>
+                <td>Interestelar</td>
+                <td>2014</td>
+                <td>Ficção científica</td>
+                <td>169 min</td>
+                <td>10 Anos</td>
+                <td>8,7</td>
+                <td>Disponível</td>
+            </tr>
+            <tr>
+                <td>Um Filme Minecraft</td>
+                <td>2025</td>
+                <td>Aventura</td>
+                <td>101 min</td>
+                <td>10 Anos</td>
+                <td>5,6</td>
+                <td>Disponível</td>
+            </tr>
+            <tr>
+                <td>Coringa (2019)</td>
+                <td>2019</td>
+                <td>Drama</td>
+                <td>122 min</td>
+                <td>16 Anos</td>
+                <td>8,3</td>
+                <td>Disponível</td>
+            </tr>
+            <tr>
+                <td>Ford vs Ferrari</td>
+                <td>2019</td>
+                <td>Drama</td>
+                <td>152 min</td>
+                <td>12 Anos</td>
+                <td>8,1</td>
+                <td>Disponível</td>
+            </tr>
+            <tr>
+                <td>Até o Último Homem</td>
+                <td>2016</td>
+                <td>Guerra</td>
+                <td>139 min</td>
+                <td>16 Anos</td>
+                <td>8,1</td>
+                <td>Disponível</td>
+            </tr>
+            <tr>
+                <td>Corações de Ferro</td>
+                <td>2014</td>
+                <td>Guerra</td>
+                <td>134 min</td>
+                <td>16 Anos</td>
+                <td>7,6</td>
+                <td>Disponível</td>
+            </tr>
+        </table>
+    </section>
+    <!-- Lista de gêneros -->
+    <section>
+        <h2>Gêneros</h2>
+        <ul class="generos">
+            <li>Ação</li>
+            <li>Comédia</li>
+            <li>Ficção científica</li>
+            <li>Aventura</li>
+            <li>Drama</li>
+            <li>Guerra</li>
+        </ul>
+    </section>
+    <!-- Informações sobre o catálogo -->
+    <section id="sobre">
+        <h2>Sobre/Contato</h2>
+        <img class="logo" src="assets/logo.png" alt="Logo do CineAlagoinhas">
+        <p>Aqui no CineAlagoinhas você encontra os melhores filmes, para todos os públicos, e informações sobre eles.</p>
+        <p> Instagram: <a href="https://www.instagram.com/" target="_blank">@cinealagoinhas</a> <br>
+            X: <a href="https://x.com/" target="_blank">@cinealagoinhas</a> <br>
+            Facebook: <a href="https://www.facebook.com/" target="_blank">@cinealagoinhas</a> <br>
+            Contato: contato@cinealagoinhas.com</p>
+    </section>
+    <!-- Rodapé -->
+    <footer>
+        <p>Alagoinhas, Bahia - desde 2026</p>
+    </footer>
 </body>
 </html>
