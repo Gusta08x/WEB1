@@ -65,15 +65,22 @@ let filmes = [
     }
 ];
 // Exibir os filmes no catálogo
-let catalogoFilmes = document.getElementById("lista_filmes");
-for (let i=0; i<filmes.length; i++) {
-    catalogoFilmes.innerHTML += `
-        <div class="filme">
-            <img src="${filmes[i].poster}" alt="${filmes[i].titulo}">
-            <h3>${filmes[i].titulo}</h3>
-            <p>Ano: ${filmes[i].ano}</p>
-            <p>Gênero: ${filmes[i].genero}</p>
-            <p>Nota: ${filmes[i].nota}</p>
-        </div>
-    `;
+function mostrarFilmes(lista) {
+    let catalogo = document.getElementById("lista-filmes");
+    let contador = document.getElementById("contador");
+    catalogo.innerHTML = "";
+    for (let i = 0; i < lista.length; i++) {
+        catalogo.innerHTML += `
+            <div class="filme">
+                <img src="${lista[i].poster}" alt="Pôster de ${lista[i].titulo}">
+                <h3>${lista[i].titulo}</h3>
+                <p>Ano: ${lista[i].ano}</p>
+                <p>Gênero: ${lista[i].genero}</p>
+                <p>Nota: ${lista[i].nota}</p>
+                ${lista[i].nota >= 8 ? '<p class="recomendado">⭐ Recomendado</p>' : ""}
+            </div>
+        `;
+    }
+    contador.innerHTML = lista.length;
 }
+mostrarFilmes(filmes);
