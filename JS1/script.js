@@ -159,3 +159,9 @@ filtroGenero.addEventListener("change", function () {
     }
     mostrarFilmes(resultado);
 });
+// Inverter Ordem do catálogo
+let btnInverter = document.getElementById("btInverter");
+btnInverter.addEventListener("click", function() {
+    filmes.reverse();
+    mostrarFilmes(filmes);
+});
