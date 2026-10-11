@@ -77,6 +77,7 @@ function mostrarFilmes(lista) {
         for (let i = 0; i < lista.length; i++) {
             conteudo += `
             <div class="filme">
+                <button onclick="favoritar(${filmes.indexOf(lista[i])})">♥ Favoritar</button><br>
                 <img src="${lista[i].poster}" alt="Pôster de ${lista[i].titulo}">
                 <h3>${lista[i].titulo}</h3>
                 <p>Ano: ${lista[i].ano}</p>
@@ -164,4 +165,30 @@ let btnInverter = document.getElementById("btInverter");
 btnInverter.addEventListener("click", function() {
     filmes.reverse();
     mostrarFilmes(filmes);
+});
+// Lista de Filmes Favoritos
+let favoritos = [];
+// Função para Favoritar um Filme
+function favoritar(indice) {
+    let titulo = filmes[indice].titulo;
+    if (!favoritos.includes(titulo)) {
+        favoritos.push(titulo);
+    }
+    mostrarFavoritos();
+}
+// Mostrar Filmes Favoritos
+function mostrarFavoritos() {
+    let contadorFavoritos = document.getElementById("contador-favoritos");
+    let listaFavoritos = document.getElementById("lista-favoritos");
+    contadorFavoritos.innerHTML = favoritos.length;
+    listaFavoritos.innerHTML = "";
+    for (let i = 0; i < favoritos.length; i++) {
+        listaFavoritos.innerHTML += `<li>${favoritos[i]}</li>`;
+    }
+}
+// Botão para Limpar Favoritos
+let btnLimparFavoritos = document.getElementById("btLimparFavoritos");
+btnLimparFavoritos.addEventListener("click", function () {
+    favoritos = [];
+    mostrarFavoritos();
 });
