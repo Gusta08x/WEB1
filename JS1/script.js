@@ -68,9 +68,14 @@ let filmes = [
 function mostrarFilmes(lista) {
     let catalogo = document.getElementById("lista-filmes");
     let contador = document.getElementById("contador");
-    catalogo.innerHTML = "";
-    for (let i = 0; i < lista.length; i++) {
-        catalogo.innerHTML += `
+    // Limpar o catálogo antes de exibir os filmes
+    let conteudo = "";
+    if (lista.length === 0) {
+        // Se não tiver filme encontrado
+        catalogo.innerHTML = "<p>Nenhum filme encontrado.</p>";
+    } else {
+        for (let i = 0; i < lista.length; i++) {
+            conteudo += `
             <div class="filme">
                 <img src="${lista[i].poster}" alt="Pôster de ${lista[i].titulo}">
                 <h3>${lista[i].titulo}</h3>
@@ -80,7 +85,24 @@ function mostrarFilmes(lista) {
                 ${lista[i].nota >= 8 ? '<p class="recomendado">⭐ Recomendado</p>' : ""}
             </div>
         `;
+        }
     }
+    catalogo.innerHTML = conteudo;
     contador.innerHTML = lista.length;
 }
 mostrarFilmes(filmes);
+// Campo para buscar filmes
+let busca = document.getElementById("busca");
+// Executa a busca quando o usuário digitar
+busca.addEventListener("input", function() {
+    // Converte texto para letras minúsculas
+    let texto = busca.value.toLowerCase();
+    let resultado = [];
+    for (let i = 0; i < filmes.length; i++) {
+        // Procura o texto no titulo do filme
+        if (filmes[i].titulo.toLowerCase().includes(texto)) {
+            resultado.push(filmes[i]);
+        }
+    }
+    mostrarFilmes(resultado);
+});
