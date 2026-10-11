@@ -192,3 +192,18 @@ btnLimparFavoritos.addEventListener("click", function () {
     favoritos = [];
     mostrarFavoritos();
 });
+// Interação com Mouse
+let tituloCatalogo = document.getElementById("titulo-catalogo");
+let tituloDestaque = document.getElementById("titulo-destaque");
+function interacaoMouse(titulo) {
+    titulo.addEventListener("mouseenter", function () {
+        titulo.style.backgroundColor = "#FFB900";
+        titulo.style.color = "#333333";
+    });
+    titulo.addEventListener("mouseout", function () {
+        titulo.style.backgroundColor = "";
+        titulo.style.color = "";
+    });
+}
+interacaoMouse(tituloCatalogo);
+interacaoMouse(tituloDestaque);
