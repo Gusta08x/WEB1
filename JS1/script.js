@@ -94,7 +94,7 @@ mostrarFilmes(filmes);
 // Campo para buscar filmes
 let busca = document.getElementById("busca");
 // Executa a busca quando o usuário digitar
-busca.addEventListener("input", function() {
+busca.addEventListener("input", function () {
     // Converte texto para letras minúsculas
     let texto = busca.value.toLowerCase();
     let resultado = [];
@@ -102,6 +102,59 @@ busca.addEventListener("input", function() {
         // Procura o texto no titulo do filme
         if (filmes[i].titulo.toLowerCase().includes(texto)) {
             resultado.push(filmes[i]);
+        }
+    }
+    mostrarFilmes(resultado);
+});
+// Filtro por gênero
+let filtroGenero = document.getElementById("filtro-genero");
+filtroGenero.addEventListener("change", function () {
+    let generoEscolhido = filtroGenero.value;
+    let resultado = [];
+    // Se filtar por "Todos", exibe todos os filmes
+    if (generoEscolhido === "Todos") {
+        resultado = filmes;
+    // Filmes de Ação
+    } else if (generoEscolhido === "Ação") {
+        for (let i = 0; i < filmes.length; i++) {
+            if (filmes[i].genero === "Ação") {
+                resultado.push(filmes[i]);
+            }
+        }
+    // Filmes de Comédia
+    } else if (generoEscolhido === "Comédia") {
+        for (let i = 0; i < filmes.length; i++) {
+            if (filmes[i].genero === "Comédia") {
+                resultado.push(filmes[i]);
+            }
+        }
+    // Filmes de Ficção científica
+    } else if (generoEscolhido === "Ficção científica") {
+        for (let i = 0; i < filmes.length; i++) {
+            if (filmes[i].genero === "Ficção científica") {
+                resultado.push(filmes[i]);
+            }
+        }
+    // Filmes de Aventura
+    } else if (generoEscolhido === "Aventura") {
+        for (let i = 0; i < filmes.length; i++) {
+            if (filmes[i].genero === "Aventura") {
+                resultado.push(filmes[i]);
+            }
+        }
+    // Filmes de Drama 
+    } else if (generoEscolhido === "Drama") {
+        for (let i = 0; i < filmes.length; i++) {
+            if (filmes[i].genero === "Drama") {
+                resultado.push(filmes[i]);
+            }
+        }
+    // Filmes de Guerra
+    } else if (generoEscolhido === "Guerra") {
+        for (let i = 0; i < filmes.length; i++) {
+            if (filmes[i].genero === "Guerra") {
+                resultado.push(filmes[i]);
+            }
         }
     }
     mostrarFilmes(resultado);

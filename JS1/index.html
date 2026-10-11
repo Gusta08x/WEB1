@@ -44,6 +44,16 @@
         <h2>Catálogo de Filmes</h2>
         <!-- Buscar Filme -->
         <input type="text" id="busca" placeholder="Buscar filme">
+        <!-- Filtro por Gênero -->
+        <select id="filtro-genero">
+            <option value="Todos">Todos os gêneros</option>
+            <option value="Ação">Ação</option>
+            <option value="Comédia">Comédia</option>
+            <option value="Ficção científica">Ficção científica</option>
+            <option value="Aventura">Aventura</option>
+            <option value="Drama">Drama</option>
+            <option value="Guerra">Guerra</option>
+        </select>
         <p>Total de Filmes: <span id="contador">0</span></p>
         <!-- Lista de filmes gerada pelo JavaScript -->
         <div id="lista-filmes"></div>
