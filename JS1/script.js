@@ -1,0 +1,79 @@
+// Array com os filmes do catálogo
+let filmes = [
+    {
+        titulo: "Velozes e Furiosos 5: Operação Rio",
+        ano: 2011,
+        genero: "Ação",
+        nota: 7.3,
+        poster: "assets/filme1.jpg"
+    },
+    {
+        titulo: "Vingadores: Guerra Infinita",
+        ano: 2018,
+        genero: "Ação",
+        nota: 8.4,
+        poster: "assets/filme2.jpg"
+    },
+    {
+        titulo: "Anjos da Lei",
+        ano: 2012,
+        genero: "Comédia",
+        nota: 7.2,
+        poster: "assets/filme3.jpg"
+    },
+    {
+        titulo: "Interestelar",
+        ano: 2014,
+        genero: "Ficção científica",
+        nota: 8.7,
+        poster: "assets/filme4.png"
+    },
+    {
+        titulo: "Um Filme Minecraft",
+        ano: 2025,
+        genero: "Aventura",
+        nota: 5.6,
+        poster: "assets/filme5.jpg"
+    },
+    {
+        titulo: "Coringa",
+        ano: 2019,
+        genero: "Drama",
+        nota: 8.3,
+        poster: "assets/filme6.jpg"
+    },
+    {
+        titulo: "Ford vs Ferrari",
+        ano: 2019,
+        genero: "Drama",
+        nota: 8.1,
+        poster: "assets/filme7.jpg"
+    },
+    {
+        titulo: "Até o Último Homem",
+        ano: 2016,
+        genero: "Guerra",
+        nota: 8.1,
+        poster: "assets/filme8.jpg"
+    },
+    {
+        titulo: "Corações de Ferro",
+        ano: 2014,
+        genero: "Guerra",
+        nota: 7.6,
+        poster: "assets/filme9.jpg"
+    }
+];
+// Exibir os filmes no catálogo
+let catalogoFilmes = document.getElementById("lista_filmes");
+for (let i=0; i<filmes.length; i++) {
+    catalogoFilmes.innerHTML += `
+        <div class="filme">
+            <img src="${filmes[i].poster}" alt="${filmes[i].titulo}">
+            <h3>${filmes[i].titulo}</h3>
+            <p>Ano: ${filmes[i].ano}</p>
+            <p>Gênero: ${filmes[i].genero}</p>
+            <p>Nota: ${filmes[i].nota}</p>
+        </div>
+    `;
+}
